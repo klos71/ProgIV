@@ -6,8 +6,10 @@ import java.util.List;
 public class Album {
 
     protected List<SoundClip> clips = new ArrayList<>();
+    List <Album> Children = new ArrayList<>();
+    Album Parent;
 
-    //skapar första root albumet
+
     public Album(String name, Album parent){
 
     }
