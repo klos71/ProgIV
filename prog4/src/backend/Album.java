@@ -7,9 +7,9 @@ import java.util.List;
 public class Album {
 
     protected List <SoundClip> clips = new LinkedList<>();
+    protected List <Album> Children = new LinkedList<>();
     protected Album Parent;
-    boolean root;
-    String Name;
+    protected String Name;
 
     //under finns getters och setters för variablerna//
     public String getName() {
@@ -28,29 +28,30 @@ public class Album {
         this.clips = clips;
     }
 
+    public List<Album> getChildren() {
+        return Children;
+    }
+
+    public void setChildren(List<Album> children) {
+        Children = children;
+    }
+
+    public Album getParent() {
+        return Parent;
+    }
+
     public void setParent(Album parent) {
         Parent = parent;
     }
 
-    public boolean isRoot() {
-        return root;
-    }
-
-    public void setRoot(boolean root) {
-        this.root = root;
-    }
-
     //Skapar ett album//
-    public Album(String name, Album parent, boolean isRoot){
+    public Album(String name, Album parent){
         setName(name);
         setParent(parent);
-        setRoot(isRoot);
     }
-
-    public void remove item
-
-    public void getParent(){
-
+    //för att skapa root album//
+    public Album(String name){
+        setName(name);
     }
 
 }
